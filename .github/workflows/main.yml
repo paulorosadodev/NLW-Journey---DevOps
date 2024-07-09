@@ -27,7 +27,7 @@ jobs:
                 password: ${{ secrets.DOCKERHUB_TOKEN }}
               
             - name: Build docker image
-              run: docker build -t nlw-journey-devops:${{ steps.generate_shar.outputs.sha }} .
+              run: docker build -t paulorosadodev/nlw-journey-devops:${{ steps.generate_shar.outputs.sha }} .
               
             - name: Push image
               run: |
