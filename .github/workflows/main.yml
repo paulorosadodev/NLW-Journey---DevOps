@@ -27,10 +27,10 @@ jobs:
                 password: ${{ secrets.DOCKERHUB_TOKEN }}
               
             - name: Build docker image
-              run: docker build -t paulorosadodev/nlw-journey-devops:${{ steps.generate_shar.outputs.sha }} .
+              run: docker build -t paulorosado/nlw-journey-devops:${{ steps.generate_shar.outputs.sha }} .
               
             - name: Push image
               run: |
-                docker push paulorosadodev/nlw-journey-devops:${{ steps.generate_shar.outputs.sha }}
-                docker tag paulorosadodev/nlw-journey-devops:${{ steps.generate_shar.outputs.sha }} paulorosadodev/nlw-journey-devops:latest
-                docker push paulorosadodev/nlw-journey-devops:latest
+                docker push paulorosado/nlw-journey-devops:${{ steps.generate_shar.outputs.sha }}
+                docker tag paulorosado/nlw-journey-devops:${{ steps.generate_shar.outputs.sha }} paulorosado/nlw-journey-devops:latest
+                docker push paulorosado/nlw-journey-devops:latest
