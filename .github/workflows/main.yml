@@ -15,4 +15,4 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Build docker image
-              run: docker build -t NLW-Journey-DevOps:latest .
+              run: docker build -t nlw-journey-devops:latest .
